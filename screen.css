@@ -1,0 +1,221 @@
+/*
+
+@Auhor Hubert Sebesta
+
+KOLORY
+
+#fbfbfb bardzo jasny szary (tło referencji)
+#e5e5e5 szary jasny (separatory)
+#606060 szary
+#ae0000 czerwony ciemny
+#ff0000 czerwony krwisty
+#bbebff błękitny
+#007dab niebieski (hiperłącza)
+#003e55 ciemny niebieski (hiperłącza, :hover)
+
+*/
+
+body {
+
+    /* Tło strony */
+    background-image: url("images/background.png");
+
+    /* powielanie obrazka */
+    background-repeat: repeat-x;
+
+    /* Szerokość  960px - mobilne i 1024 */
+    width: 960px;
+
+    /* Marginesy */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Czcionki */
+    font-family: Tahoma, Geneva, sans-serif;
+}
+/* ################### TOP ######################## */
+
+/* Box TOP wysokość */
+div#TOP {
+
+    height: 147px; /* nie musimy podawać szerokości. Dziecko nie może być większe od rodzica */
+}
+
+    /* Box logo wysokość, szerokość, margines, opływalność  */
+    div#logo {
+        width: 400px;
+        height: 80px;
+        margin-top: 30px; /* Margines od góry */
+        float: left;
+
+    }
+
+        /* Box logo grafika - text i marginesy */
+        div#logo img {
+            float: left;
+            margin: 13px 15px 10px 0px;
+        }
+
+        /* Box logo span 1 */
+        div#logo span:nth-of-type(1){
+            font-size: 50px;
+            color: #000;
+            margin-top: 10px ;
+        }
+
+        /* Box logo span 2 */
+        div#logo span:nth-of-type(2){
+            color: #606060 ;
+        }
+
+/* ############## fastContact ##################### */
+
+    /* Box fastContact */
+    div#fastContact {
+        width: 350px;
+        height: 60px;
+        text-align: right;
+        float: right;
+        margin-top: 50px;
+    }
+        /* Box fastContact grafika */
+        div#fastContact img {
+            float: right;
+            margin: 10px 0 40px 20px;
+        }
+
+        /* Box fastContact span 1 */
+        div#fastContact span:nth-of-type(1){
+            font-size: 24px;
+            color: #ae0000;
+        }
+
+        /* Box fastContact span 2 */
+        div#fastContact span:nth-of-type(2){
+            font-size: 24px;
+        }
+/* ############ fastContact END ############# */
+
+/* ############### MENU ##################### */
+
+div#MENU {
+    background-image: url("images/menu_background.png");
+    text-align: center;
+    height: 62px;
+}
+
+    /* linki */
+    div#MENU a { /* "a" uchwyt do css */
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none; /* wyłączenie podkreślenia linków */
+        border-bottom: 5px solid #000; /* krawędz */
+        border-right: 1px solid #fff; /* krawędz */
+        font-size: 20px;
+        margin-left: -5px; /* Margines moze mieć wartość ujemną */
+        padding: 15px 20px 10px;
+        line-height: 72px;
+    }
+        /* ramka pierwszego odnośnika */
+        div#MENU a:first-of-type {
+            border-left: 1px solid #fff ;
+        }
+
+        /* Zmiana koloru po najechaniu na link*/
+        div#MENU a:hover{
+            color: #ff0000;
+        }
+
+        /* Podkreślenie aktualnie odwiedzanej strony */
+        div#MENU a.active{
+            border-bottom: 5px solid #ff0000;
+        }
+
+/* ############ MENU END#################### */
+/* ############# TOP END ################### */
+
+/* ############### BANER ################### */
+
+
+/*              GRAFIKA index.php                    */
+div#sliderIndex {
+    height: 317px;
+    background-image: url("images/slider_index.jpg");
+    }
+
+/*            GRAFIKA  oFirmie.php                   */
+div#sliderAboutUs {
+    height: 180px;
+    background-image: url("images/slider_about_us.jpg");
+    }
+
+/*             GRAFIKA uslugi.php                   */
+div#sliderServices {
+    height: 180px;
+    background-image: url("images/slider_services.jpg");
+    }
+
+/*             GRAFIKA kontakt.php                   */
+div#sliderContact {
+    height: 180px;
+    background-image: url("images/slider_contact.jpg");
+    }
+
+
+
+/*             TEXT all.php                   */
+
+div#sliderIndex h1, div#sliderAboutUs h1, div#sliderServices h1, div#sliderContact h1 {
+    margin: 0;     /* Likwidowanie marginesu*/
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: 54px;
+    font-weight: normal;
+}
+div#sliderIndex span, div#sliderAboutUs span, div#sliderServices span, div#sliderContact span {
+    text-align: center;
+    display: block;
+    color: #bbebff;
+    font-size: 27px;
+}
+
+/* ############### BANER END ################ */
+
+
+
+
+
+/* ###############  BOXY ################ */
+div.box4column div, div.box2column div, div.box3column div {
+    display: inline-block; /*inline-block: posiada właściwości bloku tzn. wysokość i szerokość.*/
+    margin-left: -5px; /*inline-block posiada domyślny margines 5px*/
+    padding: 30px; /* odstępy między blokami */
+    border-right: 1px solid #e5e5e5; /* krawędz między boksami */
+    vertical-align: top;
+}
+
+/* BOX 4 KOLUMNY*/
+div.box4column div:first-of-type, div.box2column div:first-of-type, div.box3column div:first-of-type { margin-left: 0; }
+/* wyśrodkowanie textu i Szerokość 960 / 4 = 240px - 60 padding - 1 border*/
+div.box4column div { width: 179px; text-align: center; }
+/* kasowanie ostatniej krawędz między boksami */
+div.box4column div:last-of-type { border-right: 0; width: 180px; }
+
+
+/* BOX 2 KOLUMNY*/
+div.box2column div { width: 419px; }
+
+div.box2column div:last-of-type { border-right: 0; width: 420px; }
+
+div.box2column div.bigger { width: 579px; }
+
+div.box2column div.smaller { width: 259px; }
+
+
+/* BOX 3 KOLUMNY*/
+div.box3column div { width: 259px; }
+
+div.box3column div:last-of-type { border-right: 0; width: 260px; }
+
+/* ###############  BOXY END ################ */

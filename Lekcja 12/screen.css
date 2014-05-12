@@ -1,0 +1,209 @@
+/*
+
+@Auhor Fuertigo.pl (Kamil Chojnicki)
+
+Niniejszy dokument jest integralną częśćią kursu pt. Moja pierwsza Strona internetowa | Kurs HTML dla początkujących. Jego użycie oznacza akceptację regulaminu serwisu Fuertigo.pl. Dokument jest materiałem szkoleniowym i jest chroniony prawami autorskimi. Zabrania się kopiowania, rozpowszechniana dokumentu bez uprzedniej zgody autora.
+
+KOLORY
+
+#fbfbfb bardzo jasny szary (tło referencji)
+#e5e5e5 szary jasny (separatory)
+#606060 szary
+#ae0000 czerwony ciemny
+#ff0000 czerwony krwisty
+#bbebff błękitny
+#007dab niebieski (hiperłącza)
+#003e55 ciemny niebieski (hiperłącza, :hover)
+
+
+*/
+
+/* ########## Style ogólne ########## */
+
+body {
+	background-image: url("images/background.png");
+	background-repeat: repeat-x;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+h2, h3 { color: #ae0000; margin-top: 0; }
+
+a { text-decoration: none; color: #007dab; }
+
+	a:hover { color: #003e55; border-bottom: 1px dotted #ccc; }
+	
+p { color: #606060; }	
+
+hr {
+	border: 0;
+	border-top: 1px solid #e5e5e5;
+	margin: 0;
+}
+	
+blockquote { background-color: #fff; padding: 5px 30px; }
+
+strong { color: #000; }
+
+div#FOOTER {
+	height: 80px;
+	background-image: url("images/menu_bottom_background.png");
+	background-repeat: no-repeat;
+	text-align: right;
+}
+
+	div#FOOTER a {
+		color: #000;
+		padding: 0 30px;
+		line-height: 60px;
+		border-right: 1px solid #ccc;
+	}
+	
+		div#FOOTER a:last-of-type { border-right: 0; }
+		
+		div#FOOTER a:hover, div#FOOTER a.active { color: #f00; border-bottom: 0; }
+
+
+div.box_2_column div img, div.box_3_column div img { float: left; margin: 0 20px 20px 0; }
+	
+
+div#TOP { height: 147px; }
+
+	div#logo {
+		float: left;
+		width: 400px;
+		height: 80px;
+		margin-top: 30px;
+	}
+	
+		div#logo img { float: left; margin: 13px 15px 10px 0px; }
+		
+		div#logo span:nth-of-type(1) {
+			font-size: 50px;
+			color: #000;
+			margin-top: 10px;
+		}
+		
+		div#logo span:nth-of-type(2) { color: #606060; }
+
+	div#fast_contact {
+		float: right;
+		width: 350px;
+		height: 60px;
+		margin-top: 50px;
+		text-align: right;
+	}
+		div#fast_contact img { float: right; margin: 10px 0 40px 20px; }
+		
+		div#fast_contact span:nth-of-type(1) { font-size: 24px; color: #ae0000; }
+		
+		div#fast_contact span:nth-of-type(2) { font-size: 24px; }
+		
+		
+div#MENU {
+	background-image: url("images/menu_background.png");
+	text-align: center;
+	height: 62px;
+}
+		
+		div#MENU a {
+			text-transform: uppercase;
+			color: #000;
+			text-decoration: none;
+			border-bottom: 5px solid #000;
+			border-right: 1px solid #fff;
+			font-size: 20px;
+			margin-left: -5px;
+			padding: 15px 20px 10px;
+			line-height: 72px;
+		}
+		
+			div#MENU a:hover { color: #ff0000; }
+			
+			div#MENU a.active { border-bottom:  5px solid #ff0000; }
+			
+			div#MENU a:first-of-type { border-left: 1px solid #fff; }
+			
+			
+div#slider_index {
+	height: 317px;
+	background-image: url("images/slider_index.jpg");
+}
+
+	div#slider_index h1, div#slider_about_us h1, div#slider_services h1, div#slider_contact h1 {
+		margin: 0;
+		color: #fff;
+		text-align: center;
+		padding: 20px 0 10px;
+		font-size: 54px;
+		font-weight: normal;
+	}
+	
+	div#slider_index span, div#slider_about_us span, div#slider_services span, div#slider_contact span {
+		text-align: center;
+		display: block;
+		color: #bbebff;
+		font-size: 27px;
+	}
+	
+	
+div#slider_about_us { height: 180px; background-image: url("images/slider_about_us.jpg"); }
+	
+div#slider_services { height: 180px; background-image: url("images/slider_services.jpg"); }
+	
+div#slider_contact { height: 180px; background-image: url("images/slider_contact.jpg"); }
+
+
+div.box_4_column div, div.box_2_column div, div.box_3_column div {
+	display: inline-block;
+	margin-left: -5px;
+	padding: 30px;
+	border-right: 1px solid #e5e5e5;
+	vertical-align: top;
+}
+
+	div.box_4_column div:first-of-type, div.box_2_column div:first-of-type, div.box_3_column div:first-of-type { margin-left: 0; }
+
+div.box_4_column div { width: 179px; text-align: center; }
+
+	div.box_4_column div:last-of-type { border-right: 0; width: 180px; }
+
+
+div.box_2_column div { width: 419px; }
+
+	div.box_2_column div:last-of-type { border-right: 0; width: 420px; }
+	
+	div.box_2_column div.bigger { width: 579px; }
+	
+	div.box_2_column div.smaller { width: 259px; }
+	
+	
+div.box_3_column div { width: 259px; }
+
+	div.box_3_column div:last-of-type { border-right: 0; width: 260px; }
+	
+	
+
+div#references { padding: 30px; background-color: #fbfbfb; }
+
+	div#references span:nth-of-type(1) {
+		display: block;
+		text-align: center;
+		font-size: 30px;
+		color: #f00;
+	}
+	
+	div#references span:nth-of-type(2) {
+		display: block;
+		text-align: center;
+		font-size: 20px;
+	}
+
+
+
+
+
